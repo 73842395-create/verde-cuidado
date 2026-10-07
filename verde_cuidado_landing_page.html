@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde & Cuidado - El cuidado de tus plantas, más simple</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F7F6F2',
+                        beige: '#ECE8E1',
+                        'beige-dark': '#E2DDD4',
+                        forest: '#2D4030',
+                        'forest-hover': '#213123',
+                        olive: '#5B6E5D',
+                        'sage-light': '#E5EADF'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F7F6F2;
+            color: #2D4030;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#2D4030 0.5px, transparent 0.5px);
+            background-size: 16px 16px;
+            opacity: 0.05;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(45, 64, 48, 0.08);
+        }
+        .custom-shadow-lg {
+            box-shadow: 0 20px 40px -10px rgba(45, 64, 48, 0.12);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-forest selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-[#F7F6F2]/90 backdrop-blur-md border-b border-beige transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-10 h-10 rounded-full bg-forest text-white flex items-center justify-center transition-transform group-hover:scale-105">
+                        <i class="fa-solid font-bold fa-leaf text-lg"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-forest">Verde <span class="text-olive font-medium">&</span> Cuidado</span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-forest/80">
+                    <a href="#inicio" class="hover:text-forest transition-colors py-1 hover:border-b-2 border-forest">Inicio</a>
+                    <a href="#nosotros" class="hover:text-forest transition-colors py-1 hover:border-b-2 border-forest">Sobre nosotros</a>
+                    <a href="#propuesta" class="hover:text-forest transition-colors py-1 hover:border-b-2 border-forest">Cómo funciona</a>
+                    <a href="#soluciones" class="hover:text-forest transition-colors py-1 hover:border-b-2 border-forest">Soluciones</a>
+                    <a href="#guias" class="hover:text-forest transition-colors py-1 hover:border-b-2 border-forest">Guías</a>
+                    <a href="#faq" class="hover:text-forest transition-colors py-1 hover:border-b-2 border-forest">FAQ</a>
+                    <a href="#contacto" class="hover:text-forest transition-colors py-1 hover:border-b-2 border-forest">Contacto</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#soluciones" class="px-5 py-2.5 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-hover transition-all duration-200 shadow-sm hover:shadow-md">
+                        Conoce nuestras soluciones
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" aria-label="Abrir menú" class="lg:hidden p-2 rounded-lg text-forest hover:bg-beige focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-cream border-b border-beige px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-beige text-forest font-medium">Inicio</a>
+            <a href="#nosotros" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-beige text-forest font-medium">Sobre nosotros</a>
+            <a href="#propuesta" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-beige text-forest font-medium">Cómo funciona</a>
+            <a href="#soluciones" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-beige text-forest font-medium">Soluciones</a>
+            <a href="#guias" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-beige text-forest font-medium">Guías educativas</a>
+            <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-beige text-forest font-medium">Preguntas frecuentes</a>
+            <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-beige text-forest font-medium">Contacto</a>
+            <div class="pt-2">
+                <a href="#soluciones" class="mobile-nav-link block w-full text-center px-5 py-3 rounded-full bg-forest text-white text-sm font-semibold">
+                    Conoce nuestras soluciones
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Left Column Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sage-light text-forest text-xs font-semibold tracking-wide uppercase">
+                        <i class="fa-solid fa-seedling"></i> Botánica accesible & cercana
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-forest tracking-tight leading-[1.15]">
+                        El cuidado de tus plantas, <span class="italic font-serif font-normal text-olive">más simple.</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-forest/80 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Te ayudamos a encontrar soluciones prácticas para cuidar mejor tus plantas y convertir el cuidado diario en una experiencia sencilla, placentera y reconfortante.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#nosotros" class="w-full sm:w-auto px-8 py-4 rounded-full bg-forest text-white font-semibold text-base hover:bg-forest-hover transition-all duration-200 shadow-md hover:shadow-lg text-center">
+                            Conoce nuestro proyecto
+                        </a>
+                        <a href="#propuesta" class="w-full sm:w-auto px-8 py-4 rounded-full border-2 border-forest text-forest font-semibold text-base hover:bg-forest hover:text-white transition-all duration-200 text-center">
+                            Cómo podemos ayudarte
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column Image Container -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Frame -->
+                        <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-beige aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Salón acogedor con hermosas plantas de interior" 
+                                 class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                                 onerror="this.src='https://placehold.co/800x1000/2D4030/FFF?text=Plantas+de+Interior'">
+                        </div>
+
+                        <!-- Decorative Leaf Background Accent -->
+                        <div class="absolute -bottom-6 -left-6 -z-10 w-48 h-48 bg-sage-light rounded-full blur-2xl opacity-70"></div>
+                        <div class="absolute -top-6 -right-6 -z-10 w-48 h-48 bg-beige rounded-full blur-xl opacity-80"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Feature Badges Strip Below Hero -->
+            <div class="mt-16 pt-8 border-t border-beige grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="flex items-center justify-center gap-2 p-3 rounded-2xl bg-white/60 backdrop-blur-sm border border-beige/60">
+                    <i class="fa-solid fa-circle-check text-olive text-lg"></i>
+                    <span class="text-sm font-semibold text-forest">Soluciones prácticas</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 p-3 rounded-2xl bg-white/60 backdrop-blur-sm border border-beige/60">
+                    <i class="fa-solid fa-circle-check text-olive text-lg"></i>
+                    <span class="text-sm font-semibold text-forest">Productos seleccionados</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 p-3 rounded-2xl bg-white/60 backdrop-blur-sm border border-beige/60">
+                    <i class="fa-solid fa-circle-check text-olive text-lg"></i>
+                    <span class="text-sm font-semibold text-forest">Contenido educativo</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 p-3 rounded-2xl bg-white/60 backdrop-blur-sm border border-beige/60">
+                    <i class="fa-solid fa-circle-check text-olive text-lg"></i>
+                    <span class="text-sm font-semibold text-forest">Acompañamiento en el cuidado</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS SECTION -->
+    <section id="nosotros" class="py-16 lg:py-24 bg-beige/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Content Left Column -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold tracking-widest text-olive uppercase">SOBRE NOSOTROS</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-forest leading-tight">
+                        Más que productos, queremos ayudarte a cuidar.
+                    </h2>
+                    <p class="text-forest/80 leading-relaxed text-base sm:text-lg">
+                        En Verde & Cuidado entendemos que el mundo de las plantas a veces puede parecer abrumador. Con frecuencia compramos plantas con ilusión, pero la falta de orientación sobre riego, sustrato o iluminación termina deteriorándolas.
+                    </p>
+                    <p class="text-forest/80 leading-relaxed text-base">
+                        Nuestra misión es simplificar ese proceso. Seleccionamos materiales orgánicos de la más alta calidad, diseñamos kits de nutrición específicos y creamos guías visuales paso a paso para que tus plantas crezcan sanas sin complicaciones.
+                    </p>
+
+                    <div class="pt-4">
+                        <a href="#propuesta" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-forest text-white font-semibold hover:bg-forest-hover transition-all duration-200">
+                            <span>Conoce nuestra historia</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Image Right Column -->
+                <div class="lg:col-span-6">
+                    <div class="relative">
+                        <div class="rounded-3xl overflow-hidden shadow-xl border-8 border-white bg-white">
+                            <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Manos trasplantando minuciosamente una planta de interior" 
+                                 class="w-full h-[400px] object-cover"
+                                 onerror="this.src='https://placehold.co/800x600/2D4030/FFF?text=Cuidado+Manual+de+Plantas'">
+                        </div>
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-lg border border-beige max-w-xs hidden sm:block">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-sage-light flex items-center justify-center text-forest font-bold text-xl">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-forest text-sm">+10,000 Plantas</p>
+                                    <p class="text-xs text-forest/70">Salvadas y cuidadas con nuestras guías</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTRA PROPUESTA / ASÍ DE SIMPLE (01 - 04) -->
+    <section id="propuesta" class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-olive uppercase">NUESTRA PROPUESTA</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-forest mt-2">Así de simple</h2>
+                <p class="text-forest/70 mt-3 text-base">Cuatro pasos sencillos para transformar el estado de tus plantas y disfrutar del proceso.</p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Step 01 -->
+                <div class="bg-beige/60 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-beige group">
+                    <div class="text-3xl font-extrabold text-olive group-hover:text-forest transition-colors mb-4">01 —</div>
+                    <h3 class="text-xl font-bold text-forest mb-2">Seleccionamos</h3>
+                    <p class="text-forest/70 text-sm leading-relaxed">
+                        Productos y soluciones orgánicas pensadas para necesidades reales de las plantas de interior y exterior.
+                    </p>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="bg-beige/60 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-beige group">
+                    <div class="text-3xl font-extrabold text-olive group-hover:text-forest transition-colors mb-4">02 —</div>
+                    <h3 class="text-xl font-bold text-forest mb-2">Te orientamos</h3>
+                    <p class="text-forest/70 text-sm leading-relaxed">
+                        Herramientas sencillas e intuitivas para diagnosticar rápidamente qué le ocurre exactamente a tu planta.
+                    </p>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="bg-beige/60 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-beige group">
+                    <div class="text-3xl font-extrabold text-olive group-hover:text-forest transition-colors mb-4">03 —</div>
+                    <h3 class="text-xl font-bold text-forest mb-2">Te enseñamos</h3>
+                    <p class="text-forest/70 text-sm leading-relaxed">
+                        Guías prácticas y contenido visual accesible para utilizar correctamente cada tratamiento.
+                    </p>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="bg-beige/60 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-beige group">
+                    <div class="text-3xl font-extrabold text-olive group-hover:text-forest transition-colors mb-4">04 —</div>
+                    <h3 class="text-xl font-bold text-forest mb-2">Disfruta</h3>
+                    <p class="text-forest/70 text-sm leading-relaxed">
+                        Disfruta observando crecer tus plantas llenas de vida, verdor y con total tranquilidad mental.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUCIONES PARA TU PLANTA / ¿QUÉ PROBLEMA TIENE TU PLANTA? -->
+    <section id="soluciones" class="py-16 lg:py-24 bg-white/70 border-y border-beige relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold tracking-widest text-olive uppercase">SOLUCIONES PARA TU PLANTA</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-forest mt-2">¿Qué problema tiene tu planta?</h2>
+                <p class="text-forest/70 mt-3 text-base">Explora por categorías o selecciona el síntoma que notas en tus hojas o maceta.</p>
+            </div>
+
+            <!-- Filter Category Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+                <button onclick="filterCategory('all')" class="cat-btn active px-5 py-2 rounded-full text-sm font-semibold transition-all bg-forest text-white" data-cat="all">
+                    Todos
+                </button>
+                <button onclick="filterCategory('nutricion')" class="cat-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-beige text-forest hover:bg-forest/10" data-cat="nutricion">
+                    Nutrición
+                </button>
+                <button onclick="filterCategory('sustrato')" class="cat-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-beige text-forest hover:bg-forest/10" data-cat="sustrato">
+                    Sustrato y Suelo
+                </button>
+                <button onclick="filterCategory('hidratacion')" class="cat-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-beige text-forest hover:bg-forest/10" data-cat="hidratacion">
+                    Hidratación
+                </button>
+                <button onclick="filterCategory('plagas')" class="cat-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-beige text-forest hover:bg-forest/10" data-cat="plagas">
+                    Plagas
+                </button>
+                <button onclick="filterCategory('principiantes')" class="cat-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-beige text-forest hover:bg-forest/10" data-cat="principiantes">
+                    Principiantes
+                </button>
+            </div>
+
+            <!-- Problem Solutions Grid -->
+            <div id="solutionsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="solution-card bg-cream rounded-3xl overflow-hidden border border-beige shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-cat="nutricion">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80" 
+                             alt="Planta con hojas amarillentas por falta de nutrientes" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Nutrici%C3%B3n'">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-forest font-semibold text-xs px-3 py-1 rounded-full">Nutrición</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-forest">Nutrición y Amarilleo</h3>
+                            <p class="text-forest/70 text-sm mt-2">Hojas pálidas, pérdida de vigor o crecimiento estancado debido a falta de nitrógeno, hierro o potasio.</p>
+                        </div>
+                        <button onclick="openModal('nutricion')" class="w-full py-2.5 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-hover transition-colors">
+                            Conocer más
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="solution-card bg-cream rounded-3xl overflow-hidden border border-beige shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-cat="sustrato">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=600&q=80" 
+                             alt="Sustrato compacto y tierra de maceta" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Sustrato'">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-forest font-semibold text-xs px-3 py-1 rounded-full">Sustrato y Suelo</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-forest">Sustrato y Suelo Compacto</h3>
+                            <p class="text-forest/70 text-sm mt-2">Tierra endurecida que no retiene humedad ni permite la correcta aireación de las raíces vitales.</p>
+                        </div>
+                        <button onclick="openModal('sustrato')" class="w-full py-2.5 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-hover transition-colors">
+                            Conocer más
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="solution-card bg-cream rounded-3xl overflow-hidden border border-beige shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-cat="hidratacion">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=600&q=80" 
+                             alt="Riego y gotas de agua en hojas de planta" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Hidrataci%C3%B3n'">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-forest font-semibold text-xs px-3 py-1 rounded-full">Hidratación</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-forest">Hidratación y Riego</h3>
+                            <p class="text-forest/70 text-sm mt-2">Puntas secas o bordes marrones por falta de humedad ambiental o frecuencia errónea de riego.</p>
+                        </div>
+                        <button onclick="openModal('hidratacion')" class="w-full py-2.5 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-hover transition-colors">
+                            Conocer más
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="solution-card bg-cream rounded-3xl overflow-hidden border border-beige shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-cat="principiantes">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" 
+                             alt="Cuidado preventivo diario de maceta" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Cuidado+Preventivo'">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-forest font-semibold text-xs px-3 py-1 rounded-full">Preventivo</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-forest">Cuidado Preventivo</h3>
+                            <p class="text-forest/70 text-sm mt-2">Mantenimiento periódico, limpieza de hojas y fortalecimiento antes de los cambios de estación.</p>
+                        </div>
+                        <button onclick="openModal('preventivo')" class="w-full py-2.5 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-hover transition-colors">
+                            Conocer más
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="solution-card bg-cream rounded-3xl overflow-hidden border border-beige shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-cat="plagas">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80" 
+                             alt="Hojas verdes libres de plagas e insectos" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Plagas'">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-forest font-semibold text-xs px-3 py-1 rounded-full">Plagas</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-forest">Plagas de Interior</h3>
+                            <p class="text-forest/70 text-sm mt-2">Control orgánico de cochinilla, araña roja y pulgones sin dañar a tus mascotas ni la planta.</p>
+                        </div>
+                        <button onclick="openModal('plagas')" class="w-full py-2.5 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-hover transition-colors">
+                            Conocer más
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="solution-card bg-cream rounded-3xl overflow-hidden border border-beige shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-cat="principiantes">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=600&q=80" 
+                             alt="Plantas resistentes y fáciles para principiantes" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Principiantes'">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-forest font-semibold text-xs px-3 py-1 rounded-full">Principiantes</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-forest">Plantas Principiantes</h3>
+                            <p class="text-forest/70 text-sm mt-2">Variedades ultra resistentes ideales para comenzar sin estrés y ganar confianza botánica.</p>
+                        </div>
+                        <button onclick="openModal('principiantes')" class="w-full py-2.5 rounded-full bg-forest text-white text-sm font-semibold hover:bg-forest-hover transition-colors">
+                            Conocer más
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATIONAL SECTION / APRENDE A CUIDAR TUS PLANTAS -->
+    <section id="guias" class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest text-olive uppercase">EDUCATIONAL SECTION</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-forest mt-2">Aprende a cuidar tus plantas</h2>
+                <p class="text-forest/70 mt-3 text-base">Recursos visuales y lecturas breves diseñadas para que aprendas a tu propio ritmo.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Guide Card 1 -->
+                <div class="bg-beige/50 rounded-3xl p-6 border border-beige hover:bg-white hover:shadow-md transition-all group cursor-pointer" onclick="openResourceModal('Guía de Riego Consciente')">
+                    <div class="h-44 rounded-2xl overflow-hidden mb-5">
+                        <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=600&q=80" 
+                             alt="Guía de cuidado y riego" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Gu%C3%ADa+Riego'">
+                    </div>
+                    <span class="text-xs font-bold text-olive uppercase tracking-wider">Guías de cuidado</span>
+                    <h3 class="text-lg font-bold text-forest mt-1">Cómo saber cuándo regar sin equivocarte</h3>
+                </div>
+
+                <!-- Guide Card 2 -->
+                <div class="bg-beige/50 rounded-3xl p-6 border border-beige hover:bg-white hover:shadow-md transition-all group cursor-pointer" onclick="openResourceModal('Vídeos Cortos de Diagnóstico')">
+                    <div class="h-44 rounded-2xl overflow-hidden mb-5 relative">
+                        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=600&q=80" 
+                             alt="Vídeos cortos de plantas" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Videos+Cortos'">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-white/90 text-forest flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-olive uppercase tracking-wider">Vídeos cortos</span>
+                    <h3 class="text-lg font-bold text-forest mt-1">Diagnóstico visual en menos de 60 segundos</h3>
+                </div>
+
+                <!-- Guide Card 3 -->
+                <div class="bg-beige/50 rounded-3xl p-6 border border-beige hover:bg-white hover:shadow-md transition-all group cursor-pointer" onclick="openResourceModal('Consejos de Luz y Ubicación')">
+                    <div class="h-44 rounded-2xl overflow-hidden mb-5">
+                        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" 
+                             alt="Consejos de luz de ventana" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Consejos+Luz'">
+                    </div>
+                    <span class="text-xs font-bold text-olive uppercase tracking-wider">Consejos prácticos</span>
+                    <h3 class="text-lg font-bold text-forest mt-1">Luz indirecta vs sol directo: dónde ubicar cada especie</h3>
+                </div>
+
+                <!-- Guide Card 4 -->
+                <div class="bg-beige/50 rounded-3xl p-6 border border-beige hover:bg-white hover:shadow-md transition-all group cursor-pointer" onclick="openResourceModal('Errores Comunes en Plantas de Interior')">
+                    <div class="h-44 rounded-2xl overflow-hidden mb-5">
+                        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80" 
+                             alt="Errores comunes en macetas" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Errores+Comunes'">
+                    </div>
+                    <span class="text-xs font-bold text-olive uppercase tracking-wider">Errores comunes</span>
+                    <h3 class="text-lg font-bold text-forest mt-1">Los 5 fallos típicos que amarillean las hojas</h3>
+                </div>
+
+                <!-- Guide Card 5 -->
+                <div class="bg-beige/50 rounded-3xl p-6 border border-beige hover:bg-white hover:shadow-md transition-all group cursor-pointer" onclick="openResourceModal('Tutorial de Trasplante y Raíces')">
+                    <div class="h-44 rounded-2xl overflow-hidden mb-5">
+                        <img src="https://images.unsplash.com/photo-1525498128493-380d1990a112?auto=format&fit=crop&w=600&q=80" 
+                             alt="Tutoriales de cambio de maceta" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Tutorial+Trasplante'">
+                    </div>
+                    <span class="text-xs font-bold text-olive uppercase tracking-wider">Tutoriales paso a paso</span>
+                    <h3 class="text-lg font-bold text-forest mt-1">Cómo trasplantar sin provocar shock radicular</h3>
+                </div>
+
+                <!-- Guide Card 6 -->
+                <div class="bg-beige/50 rounded-3xl p-6 border border-beige hover:bg-white hover:shadow-md transition-all group cursor-pointer" onclick="openResourceModal('Guía de Limpieza Foliar')">
+                    <div class="h-44 rounded-2xl overflow-hidden mb-5">
+                        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" 
+                             alt="Limpieza de hojas" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/2D4030/FFF?text=Limpieza+Foliar'">
+                    </div>
+                    <span class="text-xs font-bold text-olive uppercase tracking-wider">Recomendaciones</span>
+                    <h3 class="text-lg font-bold text-forest mt-1">Limpieza e higiene de hojas para fotosíntesis óptima</h3>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button onclick="openResourceModal('Catálogo Completo de Guías')" class="px-8 py-3.5 rounded-full bg-forest text-white font-semibold hover:bg-forest-hover transition-colors">
+                    Ver todas las guías
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / LO QUE DICEN QUIENES CONFÍAN EN NOSOTROS -->
+    <section class="py-16 lg:py-24 bg-beige/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-olive uppercase">TESTIMONIALS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-forest mt-2">Lo que dicen quienes confían en nosotros</h2>
+                <p class="text-forest/70 mt-3 text-base">Experiencias reales de amantes de las plantas que han transformado sus espacios.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-beige flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-500 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-forest/80 italic text-sm leading-relaxed">
+                            "Pensaba que no tenía mano verde y que todas mis Monstera terminaban muriendo. Gracias a la guía de sustrato y riego de Verde & Cuidado, hoy mi salón parece una selva feliz."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 pt-6 border-t border-beige/60">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" 
+                             alt="Avatar cliente Laura M." 
+                             class="w-12 h-12 rounded-full object-cover"
+                             onerror="this.src='https://placehold.co/100x100/2D4030/FFF?text=LM'">
+                        <div>
+                            <h4 class="font-bold text-forest text-sm">Laura M.</h4>
+                            <p class="text-xs text-forest/60">Madrid, España</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-beige flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-500 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-forest/80 italic text-sm leading-relaxed">
+                            "El kit de nutrientes orgánicos funcionó milagrosamente en mi Calathea. En menos de dos semanas las hojas volvieron a estar erguidas y brillantes."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 pt-6 border-t border-beige/60">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" 
+                             alt="Avatar cliente Carlos G." 
+                             class="w-12 h-12 rounded-full object-cover"
+                             onerror="this.src='https://placehold.co/100x100/2D4030/FFF?text=CG'">
+                        <div>
+                            <h4 class="font-bold text-forest text-sm">Carlos G.</h4>
+                            <p class="text-xs text-forest/60">Barcelona, España</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-beige flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-500 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-forest/80 italic text-sm leading-relaxed">
+                            "Súper explicativo todo. La atención al cliente por WhatsApp cuando tenía dudas sobre plagas fue inmediata y muy cercana. 100% recomendado."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 pt-6 border-t border-beige/60">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" 
+                             alt="Avatar cliente Elena R." 
+                             class="w-12 h-12 rounded-full object-cover"
+                             onerror="this.src='https://placehold.co/100x100/2D4030/FFF?text=ER'">
+                        <div>
+                            <h4 class="font-bold text-forest text-sm">Elena R.</h4>
+                            <p class="text-xs text-forest/60">Valencia, España</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 lg:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold tracking-widest text-olive uppercase">PREGUNTAS FRECUENTES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-forest mt-2">¿Tienes dudas? Te las aclaramos</h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-beige overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-forest text-base sm:text-lg focus:outline-none">
+                        <span>¿Cómo funciona el servicio de orientación de Verde & Cuidado?</span>
+                        <i class="fa-solid fa-chevron-down text-olive transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-forest/80 text-sm leading-relaxed border-t border-beige/40 pt-4">
+                        Puedes explorar nuestro buscador interactivo por síntomas o escribirnos directamente a nuestro formulario/WhatsApp con fotos de tu planta. Te indicaremos el tratamiento y sustrato adecuado en menos de 24 horas.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-beige overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-forest text-base sm:text-lg focus:outline-none">
+                        <span>¿Cómo saber qué le pasa exactamente a mi planta?</span>
+                        <i class="fa-solid fa-chevron-down text-olive transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-forest/80 text-sm leading-relaxed border-t border-beige/40 pt-4">
+                        Observa los principales síntomas: las hojas amarillas suelen señalar exceso de riego o falta de nitrógeno; las puntas marrones y secas corresponden a falta de humedad; y las manchas blancas o telarañas indican presencia de plagas.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-beige overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-forest text-base sm:text-lg focus:outline-none">
+                        <span>¿Cuáles son los tiempos y costes de envío de los productos?</span>
+                        <i class="fa-solid fa-chevron-down text-olive transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-forest/80 text-sm leading-relaxed border-t border-beige/40 pt-4">
+                        Realizamos envíos en 24/48 horas laborables a toda la península. Los costes de envío son gratuitos en pedidos superiores a 35€.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-beige overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-forest text-base sm:text-lg focus:outline-none">
+                        <span>¿Qué métodos de pago aceptan?</span>
+                        <i class="fa-solid fa-chevron-down text-olive transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-forest/80 text-sm leading-relaxed border-t border-beige/40 pt-4">
+                        Aceptamos tarjetas de crédito/débito (Visa, Mastercard), Bizum, PayPal y Apple Pay con máxima seguridad encriptada.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-2xl border border-beige overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-bold text-forest text-base sm:text-lg focus:outline-none">
+                        <span>¿Los productos de tratamiento son seguros para mascotas y niños?</span>
+                        <i class="fa-solid fa-chevron-down text-olive transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-forest/80 text-sm leading-relaxed border-t border-beige/40 pt-4">
+                        Sí, el 100% de nuestros fertilizantes y jabones potásicos anti-plagas son de origen vegetal u orgánico eco-friendly, totalmente pet-friendly.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO Y AYUDA DIRECTA (DARK FOREST GREEN BG) -->
+    <section id="contacto" class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-forest rounded-[2.5rem] text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl">
+                <!-- Decorative BG circle -->
+                <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-forest-hover opacity-50 -z-0 pointer-events-none"></div>
+
+                <div class="grid lg:grid-cols-12 gap-12 items-center relative z-10">
+                    
+                    <!-- Left info -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs font-bold tracking-widest text-sage-light uppercase">CONTACTO DIRECTO</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+                            ¿Necesitas ayuda con tus plantas?
+                        </h2>
+                        <p class="text-sage-light/80 text-base leading-relaxed">
+                            Estamos aquí para orientarte. Escríbenos directamente o déjanos un mensaje con tus dudas botánicas.
+                        </p>
+
+                        <!-- Quick Action Buttons -->
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <a href="https://wa.me/#" target="_blank" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-colors">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                WhatsApp directo
+                            </a>
+                            <a href="mailto:hola@verdeycuidado.com" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-colors backdrop-blur-sm">
+                                <i class="fa-regular fa-envelope text-lg"></i>
+                                Contactarnos
+                            </a>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10 space-y-3 text-xs text-sage-light/70">
+                            <p><i class="fa-solid fa-clock mr-2"></i> Horario de atención: Lunes a Viernes, 9:00 - 18:00 hrs</p>
+                            <p><i class="fa-solid fa-location-dot mr-2"></i> Atención personalizada online para toda España</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Form Container -->
+                    <div class="lg:col-span-7 bg-white/95 text-forest p-6 sm:p-8 rounded-3xl shadow-xl backdrop-blur-sm">
+                        <form id="plantContactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="fname" class="block text-xs font-bold uppercase text-forest/70 mb-1">Nombre</label>
+                                    <input type="text" id="fname" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl border border-beige bg-cream focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest text-sm">
+                                </div>
+                                <div>
+                                    <label for="femail" class="block text-xs font-bold uppercase text-forest/70 mb-1">Correo electrónico</label>
+                                    <input type="email" id="femail" required placeholder="tu@email.com" class="w-full px-4 py-3 rounded-xl border border-beige bg-cream focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="fphone" class="block text-xs font-bold uppercase text-forest/70 mb-1">Teléfono (opcional)</label>
+                                <input type="tel" id="fphone" placeholder="+34 600 000 000" class="w-full px-4 py-3 rounded-xl border border-beige bg-cream focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest text-sm">
+                            </div>
+
+                            <div>
+                                <label for="fmsg" class="block text-xs font-bold uppercase text-forest/70 mb-1">Mensaje o duda sobre tu planta</label>
+                                <textarea id="fmsg" rows="4" required placeholder="Describe qué síntomas ves en tu planta (hojas, riego, machas...)" class="w-full px-4 py-3 rounded-xl border border-beige bg-cream focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-full bg-forest text-white font-bold hover:bg-forest-hover transition-colors shadow-md text-sm">
+                                Enviar mensaje
+                            </button>
+
+                            <!-- Success Banner -->
+                            <div id="formSuccess" class="hidden p-4 rounded-2xl bg-emerald-100 text-emerald-800 text-xs font-medium text-center">
+                                <i class="fa-solid fa-circle-check mr-1 text-sm"></i> ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo lo antes posible.
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-beige/60 border-t border-beige pt-16 pb-12 text-forest">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                
+                <!-- Col 1 Brand -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#" class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center">
+                            <i class="fa-solid fa-leaf text-sm"></i>
+                        </div>
+                        <span class="font-bold text-lg text-forest">Verde & Cuidado</span>
+                    </a>
+                    <p class="text-forest/70 text-sm max-w-sm leading-relaxed">
+                        Hacemos que el cuidado de tus plantas sea sencillo, gratificante e intuitivo. Tu compañero botánico de confianza.
+                    </p>
+                    
+                    <!-- Social icons -->
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white border border-beige flex items-center justify-center text-forest hover:bg-forest hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white border border-beige flex items-center justify-center text-forest hover:bg-forest hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white border border-beige flex items-center justify-center text-forest hover:bg-forest hover:text-white transition-colors" aria-label="Pinterest">
+                            <i class="fa-brands fa-pinterest-p text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white border border-beige flex items-center justify-center text-forest hover:bg-forest hover:text-white transition-colors" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 Links -->
+                <div>
+                    <h4 class="font-bold text-forest text-sm uppercase tracking-wider mb-4">Navegación</h4>
+                    <ul class="space-y-2.5 text-sm text-forest/80">
+                        <li><a href="#inicio" class="hover:text-forest transition-colors">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-forest transition-colors">Sobre nosotros</a></li>
+                        <li><a href="#soluciones" class="hover:text-forest transition-colors">Soluciones</a></li>
+                        <li><a href="#guias" class="hover:text-forest transition-colors">Guías educativas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 Help -->
+                <div>
+                    <h4 class="font-bold text-forest text-sm uppercase tracking-wider mb-4">Soporte</h4>
+                    <ul class="space-y-2.5 text-sm text-forest/80">
+                        <li><a href="#faq" class="hover:text-forest transition-colors">Preguntas frecuentes</a></li>
+                        <li><a href="#contacto" class="hover:text-forest transition-colors">Contacto directo</a></li>
+                        <li><a href="#" class="hover:text-forest transition-colors">Política de envío</a></li>
+                        <li><a href="#" class="hover:text-forest transition-colors">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 Newsletter -->
+                <div>
+                    <h4 class="font-bold text-forest text-sm uppercase tracking-wider mb-4">Boletín Semanal</h4>
+                    <p class="text-xs text-forest/70 mb-3">Recibe consejos sencillos de riego y cuidados en tu buzón.</p>
+                    <form onsubmit="handleNewsletter(event)" class="space-y-2">
+                        <input type="email" required placeholder="Tu correo electrónico" class="w-full px-3 py-2 rounded-xl text-xs bg-white border border-beige focus:outline-none focus:ring-1 focus:ring-forest">
+                        <button type="submit" class="w-full py-2 rounded-xl bg-forest text-white text-xs font-semibold hover:bg-forest-hover transition-colors">
+                            Suscribirme
+                        </button>
+                    </form>
+                    <div id="newsletterSuccess" class="hidden text-[11px] text-emerald-700 font-medium mt-1">
+                        ✓ ¡Suscrito con éxito!
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-beige pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-forest/60 gap-4">
+                <p>© 2026 Verde & Cuidado. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:underline">Privacidad</a>
+                    <a href="#" class="hover:underline">Aviso legal</a>
+                    <a href="#" class="hover:underline">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL FOR SOLUTIONS DETAILS -->
+    <div id="solutionModal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-fade-in space-y-4 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-beige/60 text-forest flex items-center justify-center hover:bg-beige transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalContent">
+                <!-- Dynamically filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Category Filter logic
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.solution-card');
+            const btns = document.querySelectorAll('.cat-btn');
+
+            btns.forEach(btn => {
+                if (btn.getAttribute('data-cat') === category) {
+                    btn.classList.add('bg-forest', 'text-white');
+                    btn.classList.remove('bg-beige', 'text-forest');
+                } else {
+                    btn.classList.remove('bg-forest', 'text-white');
+                    btn.classList.add('bg-beige', 'text-forest');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-cat') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Solutions Modal Data
+        const modalData = {
+            nutricion: {
+                title: "Nutrición y Amarilleo Foliar",
+                icon: "fa-seedling",
+                desc: "El amarilleo de hojas suele ser indicativo de falta de clorofila provocada por deficiencia de nitrógeno, potasio o microelementos como el hierro.",
+                solution: "Aplica nuestro Fertilizante Orgánico Balanceado cada 15 días durante primavera y verano. Asegúrate de disolver 5ml por litro de agua de riego.",
+                recommended: "Kit Nutricional Orgánico 'Verde Vigor'"
+            },
+            sustrato: {
+                title: "Sustrato y Suelo Compacto",
+                icon: "fa-mountain",
+                desc: "Cuando la tierra se vuelve como una piedra, las raíces se asfixian y no pueden absorber agua correctamente.",
+                solution: "Se recomienda airear la capa superior con un tenedor de jardinería y airear mezclando corteza de pino, perlita y humus de lombriz.",
+                recommended: "Sustrato Eco Aereado Premium 5L"
+            },
+            hidratacion: {
+                title: "Hidratación y Riego Inteligente",
+                icon: "fa-droplet",
+                desc: "Las puntas secas y crujientes indican baja humedad ambiental o períodos prolongados de sequía intercalados con encharcamiento.",
+                solution: "Usa la regla del dedo: introduce 2 cm del dedo en la tierra; si sale seco, riega abundantemente hasta que drene por la parte inferior.",
+                recommended: "Medidor de Humedad Analógico + Vaporizador"
+            },
+            preventivo: {
+                title: "Cuidado Preventivo Estacional",
+                icon: "fa-shield-halved",
+                desc: "Mantener tus plantas fuertes evita la llegada oportunista de ácaros o hongos durante los cambios estacionales.",
+                solution: "Limpia el polvo acumulado en las hojas una vez al mes con un paño húmedo y pulveriza extracto de neem suave.",
+                recommended: "Jabón Potásico Líquido Orgánico"
+            },
+            plagas: {
+                title: "Tratamiento de Plagas de Interior",
+                icon: "fa-bug",
+                desc: "Cochinillas algodonosas y arañas rojas se alimentan de la savia, debilitando los brotes tiernos.",
+                solution: "Aísla la planta afectada. Aplica jabón potásico diluido sobre el envés de las hojas y repite el proceso cada 4 días durante dos semanas.",
+                recommended: "Kit Anti-Plagas Ecológico Certificado"
+            },
+            principiantes: {
+                title: "Selección para Principiantes",
+                icon: "fa-heart",
+                desc: "Ideal si buscas plantas nobles que soporten olvidos puntuales de riego o luz baja.",
+                solution: "Recomendamos especies como Pothos, Sansevieria, Zamioculca o Monstera Deliciosa.",
+                recommended: "Pack Iniciación 'Sin Estrés'"
+            }
+        };
+
+        function openModal(key) {
+            const data = modalData[key];
+            if(!data) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="flex items-center gap-3 text-forest mb-2">
+                    <div class="w-10 h-10 rounded-full bg-sage-light flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid ${data.icon}"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">${data.title}</h3>
+                </div>
+                <div class="space-y-3 text-sm text-forest/80 pt-2">
+                    <p class="leading-relaxed"><strong>Diagnóstico:</strong> ${data.desc}</p>
+                    <div class="p-4 rounded-2xl bg-cream border border-beige space-y-1">
+                        <p class="font-bold text-forest">Tratamiento Recomendado:</p>
+                        <p class="text-xs text-forest/80 leading-relaxed">${data.solution}</p>
+                    </div>
+                    <p class="text-xs font-semibold text-olive">Producto sugerido: <span class="text-forest underline">${data.recommended}</span></p>
+                </div>
+                <div class="pt-4 flex gap-3">
+                    <a href="#contacto" onclick="closeModal()" class="w-full text-center py-3 rounded-full bg-forest text-white text-xs font-bold hover:bg-forest-hover transition-colors">
+                        Consultar disponibilidad
+                    </a>
+                </div>
+            `;
+
+            document.getElementById('solutionModal').classList.remove('hidden');
+        }
+
+        function openResourceModal(title) {
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="flex items-center gap-3 text-forest mb-2">
+                    <div class="w-10 h-10 rounded-full bg-sage-light flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">${title}</h3>
+                </div>
+                <p class="text-sm text-forest/80 leading-relaxed pt-2">
+                    Has seleccionado la guía digital <strong>"${title}"</strong>. Puedes recibir de inmediato esta guía descargable en PDF totalmente gratuita en tu correo electrónico.
+                </p>
+                <form onsubmit="handleResourceSubmit(event)" class="space-y-3 pt-3">
+                    <input type="email" required placeholder="Ingresa tu e-mail" class="w-full px-4 py-2.5 rounded-xl border border-beige text-sm focus:outline-none focus:ring-1 focus:ring-forest">
+                    <button type="submit" class="w-full py-3 rounded-full bg-forest text-white font-bold text-xs hover:bg-forest-hover">
+                        Enviar guía en PDF a mi e-mail
+                    </button>
+                </form>
+            `;
+            document.getElementById('solutionModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('solutionModal').classList.add('hidden');
+        }
+
+        // Close modal on background click
+        document.getElementById('solutionModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('solutionModal')) {
+                closeModal();
+            }
+        });
+
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('formSuccess');
+            successMsg.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+
+        function handleResourceSubmit(event) {
+            event.preventDefault();
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="text-center py-6 space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-forest">¡Guía enviada con éxito!</h3>
+                    <p class="text-xs text-forest/70">Revisa la bandeja de entrada de tu correo electrónico.</p>
+                    <button onclick="closeModal()" class="px-6 py-2 rounded-full bg-forest text-white text-xs font-bold">Cerrar</button>
+                </div>
+            `;
+        }
+
+        function handleNewsletter(event) {
+            event.preventDefault();
+            const success = document.getElementById('newsletterSuccess');
+            success.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                success.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
